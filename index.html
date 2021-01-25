@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia API</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/grid.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header" id="header">
+            <div class="logo">
+                <img src="./img/logo.png" alt="">
+            </div>
+            <div class="start-game">
+                <a class="btn" id="start-playing" href="#">¡ Start Playing !</a>
+                <button class="btn" id="how-play">¿ How To Play ?</button>
+            </div>
+
+
+            <div class="modal-form" id="modal-form">
+                <div class="close-modal btn" id="close-modal">
+                    <span class="material-icons">
+                        close
+                        </span>
+                </div>
+                
+                <h4>Youe Need Select Question Choices</h4>
+                <form action="/questions.html" id="form">
+                    <div class="row card-body">
+                        <div class="card col-md-6">
+                            <label for="number-Question">Select Number Question</label>
+                            <select id="number-Question">
+                                <option value="10">10</option>
+                                <option value="20">20</option>
+                                <option value="30">30</option>
+                                <option value="40">40</option>
+                                <option value="50">50</option>
+                            </select>
+                        </div>
+                        <div class="card col-md-6">
+                            <label for="category-Question">Select Category</label>
+                            <select id="category-Question">
+                                
+                            </select>
+                        </div>
+                        <div class="card col-md-6">
+                            <label for="difficulty-Question">Select Difficulty</label>
+                            <select id="difficulty-Question">
+                                <option value="easy">Easy</option>
+                                <option value="mediun">Medium</option>
+                                <option value="hard">Hard</option>
+                            </select>
+                        </div>
+                        <div class="card col-md-6">
+                            <label for="type-Question">Select Type</label>
+                            <select id="type-Question">
+                                <option value="multiple">Multiple Choice</option>
+                                <option value="boolean">True / False</option>
+                            </select>
+                        </div>
+                        
+
+                    </div>
+                    <button id="start-game" class="btn" type="submit" >Start Game</button>
+                </form>
+            </div>
+
+
+            <div class="modal-how" id="modal-how">
+                <div class="rules">
+                    <ul>
+                        <h4>Steps to play</h4>
+                        <li><span>✓</span> Once you hit the start game button</li>
+                        <li><span>✓</span> Select the number of questions</li>
+                        <li><span>✓</span> select category</li>
+                        <li><span>✓</span> select the difficulty</li>
+                        <li><span>✓</span> select the type of question</li>
+                        <li><span>✓</span> Start Game & Have fun</li>
+                        <button class="btn" id="ok-rules">Ok</button>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="questions-header" id="questions-header">
+            <div class="questions-body">
+                <div class="questions-container" id="questions-container">
+                    <div id="question-item">
+                        
+                    </div> 
+                    <div class="timer-container">
+                        <span id="timer"></span>
+                    </div>
+                    <div class="questions-cards">
+                        <div class="cards col-s-5 col-md-5 a">
+                            <input type="radio" id="a" name="answer" required>
+                            <span>A</span>
+                            <label id="a_text" for="a"></label>
+                        </div>
+                        <div class="cards col-s-5 col-md-5 b">
+                            <input type="radio" id="b" name="answer">
+                            <span>B</span>
+                            <label id="b_text" for="b"></label>
+                        </div>
+                        <div class="cards col-s-5 col-md-5 c">
+                            <input type="radio" id="c" name="answer">
+                            <span>C</span>
+                            <label id="c_text" for="c"></label>
+                        </div>
+                        <div class="cards col-s-5 col-md-5 d">
+                            <input type="radio" id="d" name="answer">
+                            <span>D</span>
+                            <label id="d_text" for="d"></label>
+                        </div>
+                </div>
+                </div>
+                <div class="buttons-container">
+                    <button class="btn" id="cancel-questions" >Cancel</button>
+                    <button id="next-questions" class="btn">Next Question</button>
+                    <button id="finish-questions" class="btn">Finish!</button>
+                </div>
+                <div class="next-question-alert" id="next-question-alert">
+                    <p>Time Out... 😢</p>
+                </div>
+
+                <div class="type-diffi-alert">
+                    <p id="type-diffi-alert">Easy</p>
+                </div>
+            </div>
+            <div class="correct-img" id="correct-img">
+                <img src="./img/correct.png" alt="correct">
+            </div>
+            <div class="incorrect-img" id="incorrect-img">
+                <img src="./img/incorrect.png" alt="incorrect">
+            </div>
+                    
+                    
+
+        </div>
+
+
+        <div class="results-header" id="results-header">
+            <h4>Results Questions</h4>
+
+            <div class="results-container" id="results-container">
+                <p id="results-text"></p>
+            </div>
+
+            <button class="btn btn-finish" id="btn-finish">Re - Game</button>
+        </div>
+
+        
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="module" src="./js/js.js"></script>
+</body>
+</html>
